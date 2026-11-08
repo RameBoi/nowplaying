@@ -1,0 +1,9 @@
+Package: com.rameboi.nowplayingstats
+Name: NowPlayingStats
+Depends: mobilesubstrate
+Version: 1.0
+Architecture: iphoneos-arm
+Description: Writes now-playing info and artwork for an iWidget
+Maintainer: RameBoi
+Author: RameBoi
+Section: Tweaks
