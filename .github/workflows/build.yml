@@ -8,6 +8,12 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - uses: Randomblock1/theos-action@v1
+      - name: Fix missing liblaunch in SDK
+        run: |
+          cd theos/sdks/iPhoneOS9.3.sdk/usr/lib/system
+          ls
+          sed 's/libkeymgr/liblaunch/g' libkeymgr.tbd > liblaunch.tbd
+          ls liblaunch*
       - name: Build
         run: make package FINALPACKAGE=1
       - uses: actions/upload-artifact@v4
